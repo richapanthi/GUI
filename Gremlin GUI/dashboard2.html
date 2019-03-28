@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+	<html lang="en">
+		<head>
+			<meta charset="utf-8">
+			<meta http-equiv="X-UA-Compatible" content="IE=edge">
+			<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+			<meta name="description" content="A Bootstrap based app landing page template">
+			<meta name="author" content="">
+			
+			<link rel="shortcut icon" href="assets/ico/favicon.ico">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+
+
+			<title>Dashboard- Citi</title>
+				
+	<script src="js/modernizr.js"></script> <!-- Modernizr -->
+
+
+			<!-- Bootstrap core CSS -->
+			<link href="css/bootstrap.min.css" rel="stylesheet">
+
+			<!-- Custom styles for this template -->
+			<link href="css/custom.css" rel="stylesheet">
+			<link href="css/flexslider.css" rel="stylesheet">
+			
+			<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+			<link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,700' rel='stylesheet' type='text/css'>
+			<link href='http://fonts.googleapis.com/css?family=Noto+Sans:400,700' rel='stylesheet' type='text/css'>
+			<link rel="stylesheet" href="css/animations.css" type="text/css">
+				<script src="Chart/dist/Chart.bundle.js"></script>
+				<script src="Chart/samples/utils.js"></script>
+
+
+			<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+			<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+			<![endif]-->
+
+			<style type="text/css">
+			 	.container-1 input#search1{
+				  background: #FFC0CB;
+				  color: #8B2252;				 				  				  
+				}
+
+				.container-1 input#search1::-webkit-input-placeholder {
+				   color: #8B2252;
+				}
+				 
+				.container-1 input#search1:-moz-placeholder { /* Firefox 18- */
+				   color: #8B2252;  
+				}
+				 
+				.container-1 input#search1::-moz-placeholder {  /* Firefox 19+ */
+				   color: #8B2252;  
+				}
+				 
+				.container-1 input#search1:-ms-input-placeholder {  
+				   color: #8B2252;  
+				}
+
+				/* ---- */
+
+				.container-1 input#search2{
+				  background: #CAE1FF;
+				  color: #00008B;				 				  				  
+				}
+
+				.container-1 input#search2::-webkit-input-placeholder {
+				   color: #00008B;
+				}
+				 
+				.container-1 input#search2:-moz-placeholder { /* Firefox 18- */
+				   color: #00008B;  
+				}
+				 
+				.container-1 input#search2::-moz-placeholder {  /* Firefox 19+ */
+				   color: #00008B;  
+				}
+				 
+				.container-1 input#search2:-ms-input-placeholder {  
+				   color: #00008B;  
+				}
+
+				/* ------------ */
+
+				.container-1 input#search3{
+				  background: #CAFF70;				  
+				  color: #006400;				 				  				  
+				}
+
+				.container-1 input#search3::-webkit-input-placeholder {
+				   color: #006400;
+				}
+				 
+				.container-1 input#search3:-moz-placeholder { /* Firefox 18- */
+				   color: #006400;  
+				}
+				 
+				.container-1 input#search3::-moz-placeholder {  /* Firefox 19+ */
+				   color: #006400;  
+				}
+				 
+				.container-1 input#search3:-ms-input-placeholder {  
+				   color: #006400;  
+				}	
+
+
+
+				#login-dp{
+    min-width: 260px;
+    left:-210%;
+    padding: 14px 14px 0;
+    overflow:hidden;
+    background-color:rgba(255,255,255,.8);
+}
+#login-dp .help-block{
+    font-size:12px    
+}
+#login-dp .bottom{
+    background-color:rgba(255,255,255,.8);
+    border-top:1px solid #ddd;
+    clear:both;
+    padding:14px;
+}
+#login-dp .social-buttons{
+    margin:12px 0    
+}
+#login-dp .social-buttons a{
+    width: 49%;
+}
+#login-dp .form-group {
+    margin-bottom: 10px;
+}
+.btn-fb{
+    color: #fff;
+    background-color:#3b5998;
+}
+.btn-fb:hover{
+    color: #fff;
+    background-color:#496ebc 
+}
+.btn-go{
+    color: #fff;
+    background-color:#D84B37;
+}
+.btn-go:hover{
+    color: #fff;
+    background-color:#D84B37;
+}
+@media(max-width:768px){
+    #login-dp{
+        background-color: inherit;
+        color: #fff;
+    }
+    #login-dp .bottom{
+        background-color: inherit;
+        border-top:0 none;
+    }
+}
+			
+			</style>
+
+		</head>
+
+		<body>
+			<div class="navbar navbar-inverse navbar-fixed-top main-nav" role="navigation" style="height:70px;">
+				<div class="container">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<a class="navbar-brand" href="#topWrap">
+						<img style="max-width:50px; margin-top: -7px;" src="assets/img/PQ Logo.png">
+							<!--PQ<span class="title">note</span> -->
+						</a>
+					</div>
+					<div class="collapse navbar-collapse appiNav">
+						<ul class="nav navbar-nav">
+
+
+
+
+
+
+
+
+
+
+
+
+
+							
+						</ul>
+
+					</div><!--/.nav-collapse -->
+				</div>
+			</div>
+
+<!--Sign up -->
+
+
+
+
+
+
+<!-- Sign up Ends -->
+
+
+
+
+
+<style type="text/css">
+	.card-counter{
+    box-shadow: 2px 2px 10px #DADADA;
+    margin: 5px;
+    padding: 20px 10px;
+    background-color: #fff;
+    height: 100px;
+    border-radius: 5px;
+    transition: .3s linear all;
+  }
+
+  .card-counter:hover{
+    box-shadow: 4px 4px 20px #DADADA;
+    transition: .3s linear all;
+  }
+
+  .card-counter.primary{
+    background-color: #007bff;
+    color: #FFF;
+  }
+
+  .card-counter.danger{
+    background-color: #f26460;
+    color: #FFF;
+  }  
+
+    .card-counter.danger1{
+    background-color:#C7C5C5;
+    color: #000;
+  }  
+
+  .card-counter.success{
+    background-color: #66bb6a;
+    color: #FFF;
+  }  
+
+  .card-counter.info{
+    background-color: #26c6da;
+    color: #FFF;
+  }  
+
+  .card-counter i{
+    font-size: 5em;
+    opacity: 0.2;
+  }
+
+  .card-counter .count-numbers{
+    position: absolute;
+    right: 35px;
+    top: 20px;
+    font-size: 32px;
+    display: block;
+  }
+
+  .card-counter .count-name{
+    position: absolute;
+    right: 35px;
+    top: 65px;
+    font-style: italic;
+    text-transform: capitalize;
+    opacity: 0.5;
+    display: block;
+    font-size: 18px;
+  }
+
+   .card-counter .count-name-2{
+
+    margin-top: auto;
+
+    text-transform: capitalize;
+    opacity: 0.8;
+    display: block;
+    font-size: 18px;
+    text-align:center;
+  }
+
+    .card-counter .count-name-1{
+
+    margin-top: 15px;
+
+    text-transform: capitalize;
+    opacity: 0.8;
+    display: block;
+    font-size: 18px;
+    text-align:center;
+  }
+</style>
+<div class="col-lg-12 col-md-12" >
+<style> 
+.wrapper{
+    position: relative;
+    -moz-box-shadow: 1px 2px 4px rgba(0, 0, 0,0.5);
+    -webkit-box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+    padding: 10px;
+    background: white;
+}
+
+/* Make the image fit the box */
+
+
+.wrapper::after {
+    content: '';
+    position: absolute;
+    z-index: -1; /* hide shadow behind image */
+    -webkit-box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);                
+    width: 70%; 
+    left: 15%; /* one half of the remaining 30% */
+    height: 100px;
+    bottom: 0;
+}
+
+
+
+a {
+  text-decoration: none;
+  color: #000000;
+}
+
+a:hover {
+  color: #222222
+}
+
+/* Dropdown */
+
+.dropdown {
+  display: inline-block;
+  position: relative;
+}
+
+.dd-button {
+  display: inline-block;
+  border: 1px solid gray;
+  border-radius: 4px;
+  padding: 10px 30px 10px 20px;
+  background-color: #ffffff;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.dd-button:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  width: 0; 
+  height: 0; 
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid black;
+}
+
+.dd-button:hover {
+  background-color: #eeeeee;
+}
+
+
+.dd-input {
+  display: none;
+}
+
+.dd-menu {
+  position: absolute;
+  top: 100%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 0;
+  margin: 2px 0 0 0;
+  box-shadow: 0 0 6px 0 rgba(0,0,0,0.1);
+  background-color: #ffffff;
+  list-style-type: none;
+}
+
+.dd-input + .dd-menu {
+  display: none;
+} 
+
+.dd-input:checked + .dd-menu {
+  display: block;
+} 
+
+.dd-menu li {
+  padding: 10px 20px;
+  cursor: pointer;
+  white-space: nowrap;
+  text-align: left;
+}
+
+.dd-menu li:hover {
+  background-color: #f6f6f6;
+}
+
+.dd-menu li a {
+  display: block;
+  margin: -10px -20px;
+  padding: 10px 20px;
+}
+
+.dd-menu li.divider{
+  padding: 0;
+  border-bottom: 1px solid #cccccc;
+}
+</style>
+
+
+
+<div class="container-fluid" style="margin-top:90px;">
+
+<div class="row" >
+  <div class="col-md-4" style="text-align: center; z-index: 100">
+
+<label class="dropdown">
+
+  <div class="dd-button">
+    Dropdown
+  </div>
+
+  <input type="checkbox" class="dd-input" id="test">
+
+  <ul class="dd-menu">
+    <li>Action</li>
+    <li>Another action</li>
+    <li>Something else here</li>
+
+  </ul>
+  
+</label>
+
+
+  </div>
+
+   <div class="col-md-4" style="text-align: center; z-index: 100 ">
+
+
+<label class="dropdown">
+
+  <div class="dd-button">
+    Dropdown
+  </div>
+
+  <input type="checkbox" class="dd-input" id="test">
+
+  <ul class="dd-menu">
+    <li>Action</li>
+    <li>Another action</li>
+    <li>Something else here</li>
+
+  </ul>
+  
+</label>
+
+    
+  </div>
+
+     <div class="col-md-4" style="text-align: center; z-index: 100">
+
+  <label class="dropdown">
+
+  <div class="dd-button">
+    Dropdown
+  </div>
+
+  <input type="checkbox" class="dd-input" id="test">
+
+  <ul class="dd-menu">
+    <li>Action</li>
+    <li>Another action</li>
+    <li>Something else here</li>
+
+  </ul>
+  
+</label>
+    
+  </div>
+</div>
+
+<div class="row" style="margin-top: 50px;">
+  <div class="col-md-4" >
+
+    <div class="wrapper col-2" style="background-color:#F8F8F8">
+  	<br>
+<br>
+<br>
+<h1 style="text-align: center; color: grey; ">100 %</h1>
+<br>
+<br>
+<br>
+<br>
+ </canvas></div>
+  </div>
+
+   <div class="col-md-4">
+    <div class="wrapper col-2" style="background-color:#F8F8F8"><canvas id="chart-1"></canvas></div>
+  </div>
+
+     <div class="col-md-4">
+    <div class="wrapper col-2" style="background-color:#F8F8F8"><canvas id="chart-2"></canvas></div>
+  </div>
+</div>
+
+
+<div class="row" style="padding-top:45px;">
+<div class="col-md-4" >
+	    <div class="wrapper col-2" style="background-color:#F8F8F8"><canvas id="chart-3"></canvas></div>
+  </div>
+
+   <div class="col-md-4">
+    <div class="wrapper col-2" style="background-color:#F8F8F8"><canvas id="chart-4"></canvas></div>
+  </div>
+
+     <div class="col-md-4">
+    <div class="wrapper col-2" style="background-color:#F8F8F8"><canvas id="chart-5"></canvas></div>
+</div>
+</div>
+
+
+
+  <script>
+    
+
+
+        new Chart(document.getElementById("chart-1"), {
+  type: 'line',
+  data: {
+    labels: ["2hr 00m", "2hr 01m", "2hr 02m", "2hr 03m", "2hr 04m"],
+    datasets: [{ 
+        data: [35,50,75,60,44],
+        label: "Memory Utilization (%)",
+        borderColor: "#3e95cd",
+        fill: false
+      }
+    ]
+  },
+  options: {
+    title: {
+      display: true,
+      text: 'Memory Utilization (%)'
+    },
+     elements: {
+            line: {
+                tension: 0, // disables bezier curves
+            }
+        },
+    scales: {
+            yAxes: [{
+                ticks: {
+                    suggestedMin: 0
+                    
+                }
+            }]
+        }
+  }
+});
+
+
+new Chart(document.getElementById("chart-2"), {
+  type: 'line',
+  data: {
+    labels: ["2hr 00m", "2hr 01m", "2hr 02m", "2hr 03m", "2hr 04m"],
+    datasets: [{ 
+        data: [10,12,8,18,21],
+        label: "DB connections",
+        borderColor: "#3e95cd",
+        fill: false
+      }
+    ]
+  },
+  options: {
+    title: {
+      display: true,
+      text: 'DB Connections'
+    },
+     elements: {
+            line: {
+                tension: 0, // disables bezier curves
+            }
+        },
+    scales: {
+            yAxes: [{
+                ticks: {
+                    suggestedMin: 0
+                    
+                }
+            }]
+        }
+  }
+});
+
+
+new Chart(document.getElementById("chart-3"), {
+    type: 'bar',
+    data: {
+      labels: ["#1", "#2", "#3", "#4", "#5"],
+      datasets: [
+        {
+          label: "CPU Utilization",
+          backgroundColor: "#3e95cd",
+          data: [50,50,40,30,30]
+        }, {
+          label: "Memory Utilization",
+          backgroundColor: "#8e5ea2",
+          data: [60,40,35,20,30]
+        }
+      ]
+    },
+    options: {
+      title: {
+        display: true,
+        text: 'Top 5 Processes'
+      },
+    scales: {
+            yAxes: [{
+                ticks: {
+                    suggestedMin: 0
+                    
+                }
+            }]
+        }
+    }
+});
+
+  </script>
+
+
+
+
+
+
+
+
+
+</div>
+
+   
+
+
+
+
+
+
+
+
+
+	
+			<footer style="margin-top:800px;">>
+		<div class="container" 
+			<div class="row">
+				<div class="col-xs-12 text-center">
+					<p>Copyright &copy; </p>
+					<p class="social">
+						<a href="#">
+							<span class="fa-stack fa-lg">
+								<i class="fa fa-circle fa-stack-2x"></i>
+								<i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+							</span>
+						</a>
+						<a href="#">
+							<span class="fa-stack fa-lg">
+								<i class="fa fa-circle fa-stack-2x"></i>
+								<i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+							</span>
+						</a>
+						<a href="#">
+							<span class="fa-stack fa-lg">
+								<i class="fa fa-circle fa-stack-2x"></i>
+								<i class="fa fa-google-plus fa-stack-1x fa-inverse"></i>
+							</span>
+						</a>
+						<a href="#">
+							<span class="fa-stack fa-lg">
+								<i class="fa fa-circle fa-stack-2x"></i>
+								<i class="fa fa-youtube fa-stack-1x fa-inverse"></i>
+							</span>
+						</a>
+					</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+	
+	
+
+
+
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+<script src='js/css3-animate-it.js'></script>
+    <script src="js/flexslider.js"></script>
+
+	
+<script type="text/javascript">
+$(document).ready(function() {
+
+	$('.mobileSlider').flexslider({
+		animation: "slide",
+		slideshowSpeed: 3000,
+		controlNav: false,
+		directionNav: true,
+		prevText: "&#171;",
+		nextText: "&#187;"
+	});
+	$('.flexslider').flexslider({
+		animation: "slide",
+		directionNav: false
+	});
+		
+	$('a[href*=#]:not([href=#])').click(function() {
+		if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') || location.hostname == this.hostname) {
+			var target = $(this.hash);
+			target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+			if ($(window).width() < 768) {
+				if (target.length) {
+					$('html,body').animate({
+						scrollTop: target.offset().top - $('.navbar-header').outerHeight(true) + 1
+					}, 1000);
+					return false;
+				}
+			}
+			else {
+				if (target.length) {
+					$('html,body').animate({
+						scrollTop: target.offset().top - $('.navbar').outerHeight(true) + 1
+					}, 1000);
+					return false;
+				}
+			}
+
+		}
+	});
+	
+	$('#toTop').click(function() {
+		$('html,body').animate({
+			scrollTop: 0
+		}, 1000);
+	});
+	
+	var timer;
+    $(window).bind('scroll',function () {
+        clearTimeout(timer);
+        timer = setTimeout( refresh , 50 );
+    });
+    var refresh = function () {
+		if ($(window).scrollTop()>100) {
+			$(".tagline").fadeTo( "slow", 0 );
+		}
+		else {
+			$(".tagline").fadeTo( "slow", 1 );
+		}
+    };
+		
+});
+</script>
+
+
+
+  </body>
+</html>
